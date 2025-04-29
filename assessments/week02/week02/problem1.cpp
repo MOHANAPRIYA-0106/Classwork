@@ -23,74 +23,70 @@ Sample Output1:
  ------------------------------------------------------
 */
 
-// create a program to print a number and star pattern
-
 #include <iostream>
+
+void printPattern(int N);
 
 using namespace std;
 
-// create a program to print a number and star pattern
+void printPattern(int N) 
+{
+    int itr1;
+    int itr2;
+   
+    for (int itr1 = 1; itr1 <= N; itr1++)
+    {
+       
+        cout << "*";
 
-#include <iostream>
+      
+        for (int itr2 = 1; itr2 <= itr1; itr2++) {
+            cout << itr2;
+        }
 
-using namespace std;
+       
+        for (int itr2 = itr1 - 1; itr2 >= 1; itr2--) {
+            cout << itr2;
+        }
+
+       
+        cout << "*" << endl;
+    }
+
+    for (int itr1 = N - 1; itr1 >= 1; itr1--)
+    {
+       
+        cout << "*";
+
+   
+        for (int itr2 = 1; itr2 <= itr1; itr2++) {
+            cout << itr2;
+        }
+
+       
+        for (int itr2 = itr1 - 1; itr2 >= 1; itr2--) {
+            cout << itr2;
+        }
+
+       
+        cout << "*" << endl;
+    }
+}
 
 int main() {
+    int N;
 
+ 
+    cout << "Enter a number (4 <= N <= 10): ";
+    cin >> N;
 
-	int a;									//integer variable to store the number of rows a,b
-	int b;
-	int num;								//integer variable to store the number of rows num
+    
+    if (N >= 4 && N <= 10) {
+        printPattern(N);
+    }
+    else {
+        cout << "Please enter a number between 4 and 10." << endl;
+    }
 
-	cout << "Enter the number of rows: ";
-
-	cin >> num;								//give any number
-
-
-	// Upper part 
-
-	for (int a = 1; a <= num; a++)			// Using forloop to print the upper part 
-
-	{
-		cout << "*";						// we can use cout to print the star
-
-		for (int b = 1; b < a; b++)        // give b value is 
-		{
-			cout << b;							
-
-		}
-
-		for (int b = a; b >= 1; b--) 
-		{
-			cout << b;
-
-
-		}
-		cout << "*" << endl;
-	}
-
-	// Lower part 
-
-
-	for (int a = num - 1; a >= 1; a--)		// Using forloop to print the lower part
-
-	{
-
-		cout << "*";
-
-		for (int b = 1; b < a; b++)			
-		{		
-			cout << b;
-		}
-
-		for (int b = a; b >= 1; b--)
-		{
-			cout << b;
-		}
-
-		cout << "*" << endl;				// we can use cout to print the star
-
-	}
-
-	return 0;
+    return 0;
 }
