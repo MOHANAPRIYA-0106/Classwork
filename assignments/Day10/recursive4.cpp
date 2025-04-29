@@ -27,7 +27,10 @@ int middleNum(int)
 
 	std::cin >> a >> b >> c;
 
-	if ((a > b && a < c) || (a < b && a > c)) {
+
+	if ((a > b && a < c) || (a < b && a > c))
+	{
+
 		return a;
 	}
 	else if ((b > a && b < c) || (b < a && b > c)) {
