@@ -42,6 +42,7 @@ int main()
 	{
 		cout << "a given element to present in the array " << i << endl;
 	}
+
 	else
 	{
 		cout << " is not given element to present in the array" << endl;
