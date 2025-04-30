@@ -1,46 +1,42 @@
-/*
-Write a function that takes three integers and returns the middle one (not maximum, not minimum).
+#include <iostream>
 
-Hint:
-Use basic comparisons (>, <) between the three numbers.
-Check conditions like:
+int middleNum(int, int, int);
 
-If a > b and a < c or a < b and a > c, then a is the middle.
-
-*/
-
-
-
-
-#include<iostream>
 using namespace std;
 
+int middleNum(int a, int b, int c) {
 
-int middleNum(int)
-{
-	int a;
-	int b;
-	int c;
-
-	std::cout << "Enter three numbers: ";
+    int a;
+    int b;
+    int c;
 
 
-	std::cin >> a >> b >> c;
-
-
-	if ((a > b && a < c) || (a < b && a > c))
-	{
-
-		return a;
-	}
-	else if ((b > a && b < c) || (b < a && b > c)) {
-		return b;
-	}
-	else {
-		return c;
-	}
+    if ((a > b && a < c) || (a < b && a > c))
+    
+    {
+        return a;
+    }
+    
+    else if ((b > a && b < c) || (b < a && b > c)) {
+        return b;
+    }
+   
+    else
+    {
+        return c;
+    }
 }
 
+int main() {
 
+    int x, y, z;
 
+    cout << "Enter three integers: ";
+    cin >> x >> y >> z;
 
+    int middle = findMiddleValue(x, y, z);
+
+    cout << "The middle value is: " << middle << endl;
+
+    return 0;
+}
