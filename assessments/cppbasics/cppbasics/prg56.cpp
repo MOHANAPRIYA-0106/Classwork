@@ -1,5 +1,4 @@
 /*
-
 Write a Program to Print the reverse a number
 */
 
@@ -28,6 +27,7 @@ int main() {
 	}
 
 	cout << rev << endl;
+
 	return 0;
 
 }
