@@ -46,7 +46,7 @@ Input:
 5 3 7 1 2 6
 Output:
 
-3 1 3 0 0 0
+3 2 3 0 0 0
 Explanation:
 
 5 → smaller on right: 3, 1, 2 → count = 3
